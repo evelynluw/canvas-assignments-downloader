@@ -23,7 +23,8 @@ for filename in listdir('files'):
   html_doc = open('files/' + filename, 'rb')
   soup = BeautifulSoup(html_doc, 'html.parser')
   asm = soup.find(id = 'assignment_show')
-  f.write(asm.prettify())
+  if asm:
+    f.write(asm.prettify())
   print(filename, 'is processed')
 f.write('''
 </body>
