@@ -1,0 +1,1040 @@
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+      body {
+        font-family: 'Segoe UI', 'Calibri', sans-serif;
+        width: 50em;
+        margin: 4em;
+      }
+    
+      pre {
+        font-family: 'consolas', 'monaco', monospace;
+      }
+    </style>
+  </head>
+<body>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    Test 1
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Oct 30, 2018
+     </span>
+     by
+     <span class="display_time">
+      5:30pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    100
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Oct 15, 2018 at 12am - Oct 30, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     16 days
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Oct 30, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p style="text-align: center;">
+   <strong>
+    Test 1
+   </strong>
+  </p>
+  <p>
+  </p>
+  <p>
+   <strong>
+    The Idea:
+   </strong>
+  </p>
+  <p>
+   QED Services International, Inc, was contracted by Whitewater Unified School District to write an Expression Calculator to help their students learn basic algebra through calculus. As in the project was quite large in its scope, QED Services International, Inc, has subcontracted you to finish writing a “proof of concept” program for them. Under a previous contract, you’ve written a class for them, called fraction, but due to an excessive amount work, they have had to subcontract this entire portion of the project to you.
+  </p>
+  <p>
+   As we know, an Algebraic Expression consists of at least one term, where a term consists of constants multiplied by a variable raised to a power. Constants and powers, per the contract QED Services International, Inc, signed with you can be  positive or negative fractions, positive or negative decimals, or positive or negative integers.
+  </p>
+  <p>
+   The goal of this project is for you to develop a "command line" Algebraic Expression calculator that will accept up to 26 arbitrarily long algebraic expressions composed of terms, as described above.
+  </p>
+  <p>
+   The program, named calculate, if started on the command line with no parameters, when ready for input, a prompt such as INPUT: or COMMAND: must be printed. After each successful operation, this prompt will re-appear asking for the next command. Naturally, if the user enters just the return key, then the program will terminate.
+  </p>
+  <p>
+   When the COMMAND: or INPUT: prompt appears, the user will have the following options:
+  </p>
+  <p>
+   They can enter one of the following commands: LET, EVAL, or PRINT.
+   <br/>
+   a. The command LET must be followed by a space, then a letter (A – Z), a space, then an equal sign (=), then by the algebraic expression the user wishes to assign to this letter. (e.g. LET F = 2X + 4. The result printed upon successful completion will be F = 2X + 4 in this example.
+  </p>
+  <p>
+   b. The command EVAL must be followed by a space, then the letter representing a pre-stored algebraic expression, followed by the value within parentheses. (e.g. EVAL F(1/4) ) The program will then print F(1/4) = 4 1/2
+  </p>
+  <p>
+   c. The command PRINT must be followed by a space then the letter representing a pre-stored algebraic expression (e.g PRINT F). The program will respond by printing F = 2X + 4, for example.
+  </p>
+  <p>
+   2. They can enter one of the following:
+  </p>
+  <p>
+   a. An expression, such as F = G + H, where F, G, and H are all pre-stored algebraic expressions. Upon completion, the program will print F = 2X + 4, for example.
+  </p>
+  <p>
+   b. An expression, such as F = G - H, where F, G, and H are all pre-stored algebraic expressions. Upon completion, the program will print F = 2X + 4, for example.
+  </p>
+  <p>
+   c. An expression, such as F = G * H, where F, G, and H are all pre-stored algebraic expressions. Upon completion, the program will print F = 2X + 4, for example
+  </p>
+  <p>
+   d. An expression, such as F = G’, where G’ is the derivative of G. As with the proceeding, the resultant algebraic expression will be printed.
+  </p>
+  <p>
+   e. This is the same as the above, but with the ability to enter an arbitrary derivative (such as F = G’’’). As with the proceeding, the resultant algebraic expression will be printed.
+  </p>
+  <p>
+   3. They can enter LOAD followed by a file name. This will load up to 26 pre-defined, or saved earlier, algebraic expressions. (See below for additional when there are more than one parameter on the command line)
+  </p>
+  <p>
+   4. They can enter SAVE followed by a file name. This will save the contents of the 26 algebraic expressions to a file. As with all of the programs that you have done, the program must ensure that files are not accidentally overwritten and so forth. File names for these files must end in “.exp”
+  </p>
+  <p>
+   <strong>
+    Command Line Parameters:
+   </strong>
+  </p>
+  <p>
+   When there is one parameter on the command line after the name of the program, it will load the file associated with that name. If there is no extension on the name given, the default extension of “.exp” must be added to the file name before opening the file. Conversely, if there is a /h or /? As the parameter, then a “help message” must be displayed to the user and the program terminates.
+  </p>
+  <p>
+   <br/>
+   When there are two parameters on the command line after the name of the program, the first parameter must be the word EXECUTE or RECORD. The next parameter is a “script” file, which is composed of commands, as stated from the above section which deals with input from the command line. If the word EXECUTE is present, then the program must read the file and perform all of the statements within the file. If the word in RECORD, then the program must save to a file all of the commands that the user enters in via the command line. Script files must have an extension of “.spt”; and, as above, the “.spt” must be added if the user did not provide it.
+  </p>
+  <p>
+   <br/>
+   If there are more than two parameters on the command line, then the program must “error out.” This means to notify the user that the program will be quitting and why it did so.
+  </p>
+  <p>
+   <br/>
+   <strong>
+    Program Requirements
+   </strong>
+  </p>
+  <ul>
+   <li>
+    All values must be stored in a class called Fraction. This class must be able to handle all operations between decimals, fractions, and integers.
+   </li>
+   <li>
+    All data must be stored as a Fraction with all output given as a Fraction.
+   </li>
+   <li>
+    Only ONE input stream function in the main.cpp can be written for reading of input (whether it comes from a command line or a file). Thus, the input function must be passed a parameter telling it which stream is to be used for the reading of commands.
+    <br/>
+    If the commands are coming from a file, they must be echoed to the screen. If the user is entering them, they must not be echoed.
+   </li>
+   <li>
+    All strings used must be C++ strings.
+   </li>
+   <li>
+    Exceptions must be used accordingly. Such as when a file does not exist, divide by zero, invalid input, and so forth.
+   </li>
+   <li>
+    There must be a class called expression that will store the expressions entered. This class must have Fractions for each term of the expression. (Hint: dynamic arrays or vectors)
+   </li>
+   <li>
+    Terms of the expression must be stored in either a structure or a class (preferred).
+   </li>
+  </ul>
+  <p>
+  </p>
+  <p>
+   <strong>
+    Hints:
+   </strong>
+  </p>
+  <ul>
+   <li>
+    You can never forget anything learned in any CS course. Data storage sizes are very important, and mismatches can cause severe problems.
+   </li>
+   <li>
+    cplusplus.com is your friend.
+   </li>
+   <li>
+    “Divide and Concur” this program. First, jointly design the header files, then split up the coding. Then combine headers, the main, and so forth to make a working program.
+   </li>
+  </ul>
+  <p>
+   <strong>
+    Rules of the Test:
+   </strong>
+  </p>
+  <ul>
+   <li>
+    You may use any resource you wish, as long as it can be FULLY DOCUMENTED within your code.
+   </li>
+   <li>
+    You may work in teams of two and submit one test for the team.
+   </li>
+   <li>
+    You must be prepared to answer any question about your program when you demonstrate its functionality during lab.
+   </li>
+   <li>
+    Your program must, as discussed in class, conform to object oriented design constructs. (In short, this means that if a fraction needs to do something, all code for what needs to be done must be in the fraction class, its friends, and so forth)
+   </li>
+  </ul>
+  <p>
+   <strong>
+    Extra Credit:
+   </strong>
+  </p>
+  <ul>
+   <li>
+    Addition of the ability to allow for function composition such as F = G(H), where G and H are algebraic expressions (50 points)
+   </li>
+   <li>
+    Addition of the ability to allow for division of expressions, such as F = G/H (50 points)
+   </li>
+   <li>
+    Addition of the ability to allow for operations such as F = (2X + 4)^3, without the use of the LET command (this implies that the LET command is depreciated and that the ability of raising an algebraic expression to a positive power is available) (100 points)
+   </li>
+   <li>
+    Addition of the ability to solve for all of the zeros of the polynomial expression using Newton's Algorithm (100 points).
+   </li>
+   <li>
+    Addition of the ability to do all of the above in multivariate form (x, y, z is the limit). (250 points)
+   </li>
+   <li>
+    Addition of the ability to factor expressions. (100 points)
+   </li>
+  </ul>
+  <p>
+   <strong>
+    Hints:
+   </strong>
+  </p>
+  <p>
+   <a href="http://www.repositorio.ufop.br/bitstream/123456789/4361/1/ARTIGO_ImplementingComputerAlgebra.pdf">
+    http://www.repositorio.ufop.br/bitstream/123456789/4361/1/ARTIGO_ImplementingComputerAlgebra.pdf
+   </a>
+  </p>
+  <p>
+   <a data-api-endpoint="https://canvas.pasadena.edu/api/v1/courses/1088459/pages/Symbolic_computation" data-api-returntype="Page" href="/courses/1088459/pages/Symbolic_computation">
+    https://en.wikipedia.org$WIKI_REFERENCE$/wiki/Symbolic_computation
+   </a>
+  </p>
+  <p>
+   http://www.ukma.edu.ua/~yubod/teach/compalgebra/%5BJoel_S._Cohen%5D_Computer_algebra_and_symbolic_comp(BookFi.org).pdf
+  </p>
+  <p>
+  </p>
+  <p>
+  </p>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1540945859
+  </span>
+  <span class="due_date_string">
+   10/30/2018
+  </span>
+  <span class="due_time_string">
+   05:30pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    Test 2
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Nov 27, 2018
+     </span>
+     by
+     <span class="display_time">
+      3pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    100
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Nov 19, 2018 at 12am - Nov 27, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     9 days
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Nov 27, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p style="text-align: center;">
+   <strong>
+    Test 2
+   </strong>
+  </p>
+  <p>
+   <strong>
+   </strong>
+  </p>
+  <p>
+   <strong>
+    <span style="text-decoration: underline;">
+     The Idea:
+    </span>
+   </strong>
+  </p>
+  <p>
+   QED Services International, LLC, was contracted by Whitewater Unified School District to write an Complex Number Calculator to help their students learn how to do "arithmetic" with complex numbers. As in the project was quite large in its scope, QED Services International, LLC, has subcontracted you to finish writing a “proof of concept” program for them. Under a previous contract, you’ve written a class for them, called mixedNumber (that inherits from another class you have written called Fraction), but due to an excessive amount work, they have had to subcontract this entire portion of the project to you.
+  </p>
+  <p>
+   As we know, a complex number can consist of only a real number, only an imaginary number, or the "sum" of a real number with an imaginary number (3+2i, for example).
+  </p>
+  <p>
+   The goal of this project is for you to develop a program that will allow a user to input  complex numbers (which can include only real number, only an imaginary number, or a "sum" of a real number with an imaginary number) that will be stored into "variables" labeled A to Z.. On input, only ONE complex number can be entered to assigned to a variable. All mathematical operations will be done with variables.
+  </p>
+  <p>
+   The program, named complexCalculate, if started on the command line with no parameters, when ready for input, a prompt such as INPUT: or COMMAND: must be printed. After each successful operation, this prompt will re-appear asking for the next command. Naturally, if the user enters just the return key, then the program will terminate.
+  </p>
+  <p>
+   When the COMMAND: or INPUT: prompt appears, the user will have the following options:
+  </p>
+  <ol>
+   <li>
+    They can enter one of the following commands: LET, LOAD, SAVE, or PRINT, EXIT, or WEXIT.
+   </li>
+  </ol>
+  <p style="padding-left: 60px;">
+   a. The command LET must be followed by a space, then a letter (A – Z), a space, then an equal sign (=), then by the complex number the user wishes to assign to this letter. (e.g. LET F = 2 + 4i). The result printed upon successful completion will be F = 2 + 4iin this example.
+  </p>
+  <p style="padding-left: 30px;">
+   b.     The command PRINT must be followed by a space then the letter representing a pre-stored complex number (e.g PRINT F). The program will respond by printing F = 2 + 4i, for example.
+  </p>
+  <p style="padding-left: 30px;">
+   c. The command SAVE shall be followed by a filename. If the filename does not end in .complex, the program shall ensure that it ends in .complex by either adding this extension or correcting the extension that the user provided. Of course, all verification of overwriting files, etc, must be done.
+  </p>
+  <p style="padding-left: 30px;">
+   d. The command LOAD shall be followed by a filename. If the filename does not end in .complex, the program shall ensure that it ends in .complex by either adding this extension or correcting the extension that the user provided.
+  </p>
+  <p style="padding-left: 30px;">
+   e. The command EXIT shall exit the program. If the user  has not immediately prior to this command saved the memory contents, the program shall prompt the user if they wish to save the data to a file. If they do, the restrictions for SAVE apply.
+  </p>
+  <p style="padding-left: 30px;">
+   f. The command WEXIT shall  be followed by a filename. The program will exit the program after following the guidelines for SAVE above.
+  </p>
+  <p>
+   2.     They can enter one of the following:
+  </p>
+  <p style="padding-left: 30px;">
+   a.     An expression, such as F = G + H, where F, G, and H are all pre-stored complex numbers. Upon completion, the program will print F = 2 + 4i, for example.
+  </p>
+  <p style="padding-left: 30px;">
+   b.     An expression, such as F = G - H, where F, G, and H are all pre-stored complex number. Upon completion, the program will print F = 2 + 4i, for example.
+  </p>
+  <p style="padding-left: 30px;">
+   c.     An expression, such as F = G * H, where F, G, and H are all pre-stored complex number. Upon completion, the program will print F = 2 + 4i, for example
+  </p>
+  <p style="padding-left: 30px;">
+   d.     An expression, such as F = G^H, where F is  the result of raising G to the H power (in complex number operations). As with the proceeding, the resultant complex number  will be printed.
+  </p>
+  <p style="padding-left: 30px;">
+   e.    An expression, such as F = G / H, where F, G, and H are all pre-stored complex number. Upon completion, the program will print F = 2 + 4i, for example
+  </p>
+  <p style="padding-left: 30px;">
+   f. Compute the Conjugate of Complex number by entering F = ~G. F would then hold 2 - 4i if G held 2 + 4i
+  </p>
+  <p style="padding-left: 30px;">
+   g, Trig(F) would display the polar coordinate version of the complex number.
+  </p>
+  <p>
+   3.     They can enter LOAD followed by a file name. This will load up to 26 pre-defined, or saved earlier, complex numbers. (See below for additional when there are more than one parameter on the command line)
+  </p>
+  <p>
+   4. They can enter SAVE followed by a file name. This will save the contents of the 26 complex numbers to a file. As with all of the programs that you have done, the program must ensure that files are not accidentally overwritten and so forth. File names for these files must end in “.complex”
+  </p>
+  <p>
+   <strong>
+    Command Line Parameters:
+   </strong>
+  </p>
+  <ol>
+   <li>
+    When there is one parameter on the command line after the name of the program, it will load the file associated with that name. If there is no extension on the name given, the default extension of “.complex” must be added to the file name before opening the file. Conversely, if there is a /h or /? As the parameter, then a “help message” must be displayed to the user and the program terminates.
+   </li>
+   <li>
+    When there are two parameters on the command line after the name of the program, the first parameter must be the word EXECUTE or RECORD. The next parameter is a “script” file, which is composed of commands, as stated from the above section which deals with input from the command line. If the word EXECUTE is present, then the program must read the file and perform all of the statements within the file. If the word in RECORD, then the program must save to a file all of the commands that the user enters in via the command line. Script files must have an extension of “.spt”; and, as above, the “.spt” must be added if the user did not provide it.
+   </li>
+   <li>
+    If there are more than two parameters on the command line, then the program must “error out.”
+   </li>
+  </ol>
+  <p>
+   <strong>
+    <span style="text-decoration: underline;">
+     Program Requirements
+    </span>
+   </strong>
+  </p>
+  <ol>
+   <li>
+    All values must be stored in a class called complexNumber. This class must be able to handle all operations between decimals, fractions, and integers with mixedNumbers. The following are some, but no where near all,  examples of complex numbers: 4, -2i, 3-2i, -3/2 - 3.5i, 4 2/3l.
+   </li>
+   <li>
+    All data must be stored as a complex number, with all output given as a complex number.
+   </li>
+   <li>
+    Only ONE input stream function in the main.cpp can be written for reading of input (whether it comes from a command line or a file). Thus, the input function must be passed a parameter telling it which stream is to be used for the reading of commands.
+   </li>
+   <li>
+    If the commands are coming from a file, they must be echoed to the screen. If the user is entering them, they must not be echoed.
+   </li>
+   <li>
+    All strings used must be C++ strings.
+   </li>
+   <li>
+    Exceptions must be used accordingly. Such as when a file does not exist, divide by zero, invalid input, and so forth.
+   </li>
+   <li>
+    There must be a class called memories that will store the complex numbers that have been entered. This class shall have an array of complex numbers.
+   </li>
+  </ol>
+  <p>
+   <strong style="font-size: 1rem;">
+    <span style="text-decoration: underline;">
+     Hints:
+    </span>
+   </strong>
+  </p>
+  <ol>
+   <li>
+    You can never forget anything learned in any CS course. Data storage sizes are very important, and mismatches can cause severe problems.
+   </li>
+   <li>
+    cplusplus.com is your friend.
+   </li>
+   <li>
+    “Divide and Concur” this program. First, jointly design the header files, then split up the coding. Then combine headers, the main, and so forth to make a working program.
+   </li>
+   <li>
+    Note that above specifications IMPLY that a class called complexNumber is required!!! This means that this class has to perform EVERYTHING in its own right! (Input, output, etc....)
+   </li>
+  </ol>
+  <p>
+   <strong>
+    <span style="text-decoration: underline;">
+     Rules of the Test:
+    </span>
+   </strong>
+  </p>
+  <ul>
+   <li>
+    You may use any resource you wish, as long as it can be FULLY DOCUMENTED within your code.
+   </li>
+   <li>
+    You may work in teams of two and submit one test for the team.
+   </li>
+   <li>
+    You must be prepared to answer any question about your program when you demonstrate its functionality during lab.
+   </li>
+   <li>
+    Your program must, as discussed in class, conform to object oriented design constructs. (In short, this means that if a mixed number needs to do something, all code for what needs to be done must be in the mixed number class, its friends,  and so forth)
+   </li>
+  </ul>
+  <p>
+   <strong>
+    <span style="text-decoration: underline;">
+     Extra Credit:
+    </span>
+   </strong>
+  </p>
+  <ol>
+   <li>
+    Addition of the ability to allow the entering of complex numbers in polar coordinate form and store them in "normal" (e.g. 2 + 4i) format. (50 points)
+   </li>
+   <li>
+    Addition of the ability to determine of two complex numbers are orthogonal to each other (50 points.)
+   </li>
+   <li>
+    Addition of the ability to compute the  magnitude of a complex number (50 points)
+   </li>
+  </ol>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1543359659
+  </span>
+  <span class="due_date_string">
+   11/27/2018
+  </span>
+  <span class="due_time_string">
+   03:00pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    Test 2 Extra Credit
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Nov 27, 2018
+     </span>
+     by
+     <span class="display_time">
+      11:59pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    0
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  No Content
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1543391999
+  </span>
+  <span class="due_date_string">
+   11/27/2018
+  </span>
+  <span class="due_time_string">
+   11:59pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    The Shunting Yard Algorithm
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Dec 4, 2018
+     </span>
+     by
+     <span class="display_time">
+      11:59pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    10
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Nov 22, 2018 at 12am - Dec 7, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     16 days
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Dec 7, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p>
+   Write a program that will take an algebraic expression consisting of mixed numbers, integers, decimal numbers, or fractions and the basic mathematical operators (add, subtract, multiply, divide, and parentheses) and then re-write the algebraic expression in Reverse Polish Notation. (see
+   <a data-api-endpoint="https://canvas.pasadena.edu/api/v1/courses/1088459/pages/Reverse_Polish_notation" data-api-returntype="Page" href="/courses/1088459/pages/Reverse_Polish_notation">
+    http://en.wikipedia.org$WIKI_REFERENCE$/wiki/Reverse_Polish_notation
+   </a>
+   and
+   <a data-api-endpoint="https://canvas.pasadena.edu/api/v1/courses/1088459/pages/Shunting-yard_algorithm" data-api-returntype="Page" href="/courses/1088459/pages/Shunting-yard_algorithm">
+    http://en.wikipedia.org$WIKI_REFERENCE$/wiki/Shunting-yard_algorithm
+   </a>
+   )
+  </p>
+  <p>
+   Notice that in order to do this, you must have a stack!!!! C++, graciously,  has a pre-made stack which you can use. You must include &lt;stack&gt; and tell it what type of data you'll be sending it. cplusplus.com has complete documentation on the built-in stack class.
+  </p>
+  <p>
+  </p>
+  <p>
+   Examples:
+  </p>
+  <p>
+   Algebraic &lt;==&gt; RPN
+  </p>
+  <p>
+   3 * 4 &lt;==&gt; 3 4 *
+   <br/>
+   3 * ( 4 + 2 ) &lt;==&gt; 4 2 + 3 *
+   <br/>
+   (4 + 5) / ( 5 + 6) &lt;==&gt; 4 5 + 5 6 + /
+  </p>
+  <p>
+  </p>
+  <p>
+   In order to do this assignment, you must develop a class that will accept a C++ string, using the insertion operator (&lt;&lt;) and then, via the extraction operator (&gt;&gt;) it will place the resultant RPN expression into a string. Conversely, the class may need to read from a file or the console, and write to either.
+  </p>
+  <p>
+   Your program must take as input from the command line a file that contains one or more algebraic expressions and write out a file with the RPN translations of each algebraic expression. If the command line is empty, then it must prompt for an expression, and keep translating, until an empty line is entered.
+  </p>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1543996799
+  </span>
+  <span class="due_date_string">
+   12/04/2018
+  </span>
+  <span class="due_time_string">
+   11:59pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    The Shunting Yard, version deux
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Dec 6, 2018
+     </span>
+     by
+     <span class="display_time">
+      11:59pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    10
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Nov 13, 2018 at 12am - Dec 7, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     25 days
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Dec 7, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p>
+   Revise the Shunting Yard program so that will take an algebraic expression consisting of positive or negative real numbers, fractions, mixed numbers, or integers and   the basic mathematical operators (add, subtract, multiply, divide, and parentheses) and then re-write the algebraic expression in Reverse Polish Notation. For this version, you must verify that the numbers entered are correct (meaning 4.2.2 is NOT a valid number!)  (see
+   <a class="external" data-api-endpoint="https://canvas.pasadena.edu/api/v1/courses/1088459/pages/Reverse_Polish_notation" data-api-returntype="Page" href="/courses/1088459/pages/Reverse_Polish_notation" target="_blank">
+    http://en.wikipedia.org$WIKI_REFERENCE$/wiki/Reverse_Polish_notation
+    <span class="screenreader-only">
+     (Links to an external site.)
+    </span>
+   </a>
+   and
+   <a class="external" data-api-endpoint="https://canvas.pasadena.edu/api/v1/courses/1088459/pages/Shunting-yard_algorithm" data-api-returntype="Page" href="/courses/1088459/pages/Shunting-yard_algorithm" target="_blank">
+    http://en.wikipedia.org$WIKI_REFERENCE$/wiki/Shunting-yard_algorithm
+    <span class="screenreader-only">
+     (Links to an external site.)
+    </span>
+   </a>
+   )
+  </p>
+  <p>
+   Notice that in order to do this, you must have a stack!!!!
+  </p>
+  <p>
+  </p>
+  <p>
+   Examples:
+  </p>
+  <p>
+   Algebraic &lt;==&gt; RPN
+  </p>
+  <p>
+   3.5 * 4.2 &lt;==&gt; 3.5 4.2 *
+   <br/>
+   3 * ( .14 + 2.1 ) &lt;==&gt; 0.14 2.1 + 3 *
+   <br/>
+   (4 + 5) / ( 5 + 6) &lt;==&gt; 4 5 + 5 6 + /
+  </p>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1544169599
+  </span>
+  <span class="due_date_string">
+   12/06/2018
+  </span>
+  <span class="due_time_string">
+   11:59pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    Two Dimension Arrays of Variable Length
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Sep 12, 2018
+     </span>
+     by
+     <span class="display_time">
+      11:59pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    10
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Sep 5, 2018 at 12am - Dec 7, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     3 months
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Dec 7, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p>
+   1. Fix the program, doubleDimensionArray, done in class  on 9/5/18 so that the program does not de-reference a null pointer as well as the other "errors" that are in the program.
+  </p>
+  <p>
+   3. Write a program that will read the files created by the program above and display them on the screen and allow the user to edit the data by row and column address. After all editing, the program will rewrite the file with the modifications. Note that editing can include deleting all content, changing the value(s) in any particular cell(s), or reloading the matrix with random numbers within a given range.  The program must "guarantee" that files will not be overwritten; unless the user desires the file to be overwritten.
+  </p>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1536821940
+  </span>
+  <span class="due_date_string">
+   09/12/2018
+  </span>
+  <span class="due_time_string">
+   11:59pm
+  </span>
+ </div>
+</div>
+<div class="assignment content_underline_links" id="assignment_show">
+ <!--Student View-->
+ <div class="assignment-title">
+  <div class="title-content">
+   <h1 class="title">
+    Variable length arrays
+   </h1>
+  </div>
+  <div class="assignment-buttons">
+  </div>
+ </div>
+ <ul class="student-assignment-overview">
+  <li>
+   <span class="title">
+    Due
+   </span>
+   <span class="value">
+    <span class="date_text">
+     <span class="display_date">
+      Sep 26, 2018
+     </span>
+     by
+     <span class="display_time">
+      11:59pm
+     </span>
+    </span>
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Points
+   </span>
+   <span class="value">
+    10
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Submitting
+   </span>
+   <span class="value">
+    a text entry box, a website url, a media recording, or a file upload
+   </span>
+  </li>
+  <li>
+   <span class="title">
+    Available
+   </span>
+   <span class="value">
+    Sep 20, 2018 at 12am - Dec 7, 2018 at 11:59pm
+    <span style="font-size: 0.8em;">
+     3 months
+    </span>
+   </span>
+  </li>
+  <div class="clear">
+  </div>
+ </ul>
+ <div class="clear">
+ </div>
+ This assignment was locked Dec 7, 2018 at 11:59pm.
+ <div class="clear">
+ </div>
+ <div class="description user_content student-version">
+  <p>
+   Write two programs, one which will ask the user for the following information:
+  </p>
+  <ul>
+   <li>
+    The number of random numbers the user wants
+   </li>
+   <li>
+    The lowest number the user wishes to see
+   </li>
+   <li>
+    The highest number the user wishes to see
+   </li>
+   <li>
+    The file name in which the data will be stored
+   </li>
+   <li>
+    Whether the user wishes to see the data printed on the screen in a "columnar" form.(NOTE: only ONE output function is allowed!!!!)
+   </li>
+  </ul>
+  <p>
+   When the program executes, it will write to the file the number of random numbers the file contains first, then the random numbers. If writing to the screen, the numbers must be in equal sized columns, with the column size based upon the largest number of digits, including the negative sign, plus two spaces. (HINT: The number of digits in a positive integerr is 1 + (int)log10(n)  where n is the number in question.)
+  </p>
+  <p>
+  </p>
+  <p>
+   The second program will ask the user for the name of the file to be read, or given via the command line as an argument to the program,  and then dynamically create an array. Then it will read in all of the numbers, and then display them in unsorted and sorted fashion (with, of course, the output being in proper columnar form.
+  </p>
+  <p>
+   Both programs must check for "errors" and handle accordingly. (Such as the input file not existing, the output file already existing, and so forth.)
+  </p>
+ </div>
+ <div style="display: none;">
+  <span class="timestamp">
+   1538031599
+  </span>
+  <span class="due_date_string">
+   09/26/2018
+  </span>
+  <span class="due_time_string">
+   11:59pm
+  </span>
+ </div>
+</div>
+
+</body>
+</html>
