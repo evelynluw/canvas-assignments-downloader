@@ -13,7 +13,7 @@ Then create a sub directory in this folder named `files`:
 `>>> mkdir assignments/files`
 
 ## 1. Download all the assignment files
-Download all the assignment pages in html format and move into the `assignments/files` directory. 
+Download all the assignment pages in html format and move into the `assignments/files` directory. Download `scrap.py` into the `assignments` dir. 
 
 An easy way to do this is to use a browser extension. E.g. [Chrono Download Manager](https://chrome.google.com/webstore/detail/chrono-download-manager/mciiogijehkdemklbdcbfkefimifhecn). In Sniffer->Other, choose all the assignment pages needed and hit `Download All!`. 
 
