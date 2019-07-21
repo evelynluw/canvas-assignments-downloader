@@ -3,8 +3,6 @@ Have any of your friends asked for the course material of a class you've taken? 
 
 Well now you have a solution! Just follow the following steps, and use the script in this repository! 
 
-Note: please don't use the code in this repo and the following instructions for commercial purposes. 
-
 ## 0. Create a diretory
 First, create an emtpy directory: 
 
